@@ -1,5 +1,5 @@
 <div class="div-componente-principal">
-  <div class="div-corpo-texto">
+  <div class="div-corpo-texto" #scroll>
     Contrary to popular belief, Lorem Ipsum is not simply random text. It has
     roots in a piece of classical Latin literature from 45 BC, making it over 2000
     years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
@@ -30,7 +30,7 @@
     accompanied by English versions from the 1914 translation by H. Rackham.
   </div>
   <div class="buttons">
-    <button class="up button">^</button>
-    <button class="down button">v</button>
+    <button class="up button" (click)="onPreviousSearchPosition()" [disabled]="!scrollUp">^</button>
+    <button class="down button" (click)="onNextSearchPosition()" [disabled]="!scrollDown">v</button>
   </div>
 </div>
